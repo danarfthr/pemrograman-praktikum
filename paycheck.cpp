@@ -20,8 +20,8 @@ int main() {
     cout << "Masukkan Gaji Kotor (Rp): ";
     cin >> gsal;
 
-    // Input biaya instalasi dan asuransi
-    cout << "Masukkan Biaya Instalasi (Rp): ";
+    // Input biaya cicilan dan asuransi
+    cout << "Masukkan Biaya Cicilan (Rp): ";
     cin >> inst;
     cout << "Masukkan Biaya Asuransi (Rp): ";
     cin >> insu;
@@ -29,7 +29,7 @@ int main() {
     // Menghitung pajak
     tax = gsal * 0.2;
     
-    // Gaji kotor dikurangi pajak, instalasi dan asuransi
+    // Gaji kotor dikurangi pajak, cicilan dan asuransi
     salary = gsal - tax - inst - insu;
     
     // Print output hasil perhitungan payslip
