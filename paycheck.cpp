@@ -8,8 +8,8 @@ int main() {
     string name;
     int gsal;
     int tax;
-    int inst = 200000;
-    int insu = 150000;
+    int inst;
+    int insu;
     int salary;
     
     // Input name
@@ -19,6 +19,12 @@ int main() {
     // Input gross salary
     cout << "Masukkan Gaji Kotor (Rp): ";
     cin >> gsal;
+
+    // Input biaya instalasi dan asuransi
+    cout << "Masukkan Biaya Instalasi (Rp): ";
+    cin >> inst;
+    cout << "Masukkan Biaya Asuransi (Rp): ";
+    cin >> insu;
     
     // Menghitung pajak
     tax = gsal * 0.2;
