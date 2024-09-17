@@ -1,13 +1,13 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall
-TARGET = sum-num
-SRC = sum-num.cpp
+TARGET = sum
+SRC = sum.cpp
 
 # Default target: compile the program
 all: $(TARGET)
 
-# Compile the sum-num.cpp
+# Compile the sum.cpp
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 

@@ -6,7 +6,7 @@ int main() {
     int a;
     int b;
     int c;
-    int terbesar;
+    int terbesar = 0;
 
     cout << "Inputkan bilangan 1: ";
     cin >> a;
