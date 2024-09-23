@@ -15,10 +15,6 @@ $(TARGET): $(SRC)
 run: $(TARGET)
 	./$(TARGET)
 
-# Run the program in test mode 
-test: $(TARGET)
-	./$(TARGET) test
-
 # Clean up the compiled files
 clean:
 	rm -f $(TARGET)
