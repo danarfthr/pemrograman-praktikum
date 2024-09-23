@@ -12,9 +12,8 @@ void multiplication(int n) {
 }
 
 int main(int argc, char* argv[]) {
-    int n;
-    cout << "Input : ";
-    cin >> n;
+    int n = 8;
+    cout << "Input : " << n << endl;
     cout << "Output: " << endl;
     multiplication(n);
 
