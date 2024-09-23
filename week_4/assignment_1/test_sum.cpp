@@ -12,9 +12,8 @@ int sum(int n) {
 
 int main(int argc, char* argv[]) {
 
-    int n;
-    cout << "Input n: ";
-    cin >> n;
+    int n = 8;
+    cout << "Input test: " << n << endl;
     cout << sum(n) << endl;
     
     return 0;
