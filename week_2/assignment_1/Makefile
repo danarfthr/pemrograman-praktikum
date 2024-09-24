@@ -2,7 +2,9 @@
 CXX = g++
 CXXFLAGS = -Wall
 TARGET = payslip
+TARGETTEST = test_payslip
 SRC = payslip.cpp
+SRCTEST = test_payslip.cpp
 
 # Default target: compile the program
 all: $(TARGET)
@@ -15,13 +17,16 @@ $(TARGET): $(SRC)
 run: $(TARGET)
 	./$(TARGET)
 
-# Run the program in test mode 
-test: $(TARGET)
-	./$(TARGET) test
-
 # Clean up the compiled files
 clean:
 	rm -f $(TARGET)
+	rm -f $(TARGETTEST)
+
+test: ${TARGETTEST}
+
+$(TARGETTEST): $(SRCTEST)
+	$(CXX) $(CXXFLAGS) -o $(TARGETTEST) $(SRCTEST)
+	./$(TARGETTEST)
 
 # Phony targets to avoid conflicts
 .PHONY: all clean test
