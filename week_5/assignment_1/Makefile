@@ -1,15 +1,16 @@
 # Variables
 CXX = g++
-CXXFLAGS = -Wall
-TARGET = fizzbuzz
-TARGETTEST = test_fizzbuzz
-SRC = fizzbuzz.cpp
-SRCTEST = test_fizzbuzz.cpp
+CXXFLAGS = -Wall -std=c++11
+TARGET = assignment
+SRC = assignment.cpp
+TARGET_TEST = test
+SRC_TEST = test.cpp
 
-# Default target: compile the program
+# Default target
 all: $(TARGET)
+	./$(TARGET)
 
-# Compile the fizzbuzz.cpp
+# Compile the program
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(SRC)
 
@@ -17,16 +18,17 @@ $(TARGET): $(SRC)
 run: $(TARGET)
 	./$(TARGET)
 
-# Clean up the compiled files
+# Clean the compiled files
 clean:
 	rm -f $(TARGET)
-	rm -f $(TARGETTEST)
+	rm -f $(TARGET_TEST)
 
-test: ${TARGETTEST}
+# Compile and run with test input
+test: $(TARGET_TEST)
+	./$(TARGET_TEST)
 
-$(TARGETTEST): $(SRCTEST)
-	$(CXX) $(CXXFLAGS) -o $(TARGETTEST) $(SRCTEST)
-	./$(TARGETTEST)
+$(TARGET_TEST): $(SRC_TEST)
+	$(CXX) $(CXXFLAGS) -o $(TARGET_TEST) $(SRC_TEST)
+	./$(TARGET_TEST)
+	
 
-# Phony targets to avoid conflicts
-.PHONY: all clean test
