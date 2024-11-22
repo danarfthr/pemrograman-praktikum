@@ -55,7 +55,7 @@ int main() {
 
     int size_array = sizeof(mhs) / sizeof(mhs[0]);
 
-    int cari_nilai = 60;
+    int cari_nilai = 90;
 
     // Sort the array by nilai
     insertionSortNilai(mhs, size_array);

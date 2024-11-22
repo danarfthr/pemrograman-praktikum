@@ -66,11 +66,11 @@ int main() {
 
     int size_array = sizeof(mhs) / sizeof(mhs[0]);
 
-    long int cari_nisn = 9965653989;
+    long int cari_nisn = 9960312699;
 
     insertionSortNISN(mhs, size_array);
 
     binarySearchNISN(mhs, size_array, cari_nisn);
 
-
+    return 0;
 }
