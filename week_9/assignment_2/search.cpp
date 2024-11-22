@@ -66,7 +66,7 @@ int main() {
 
     int size_array = sizeof(mhs) / sizeof(mhs[0]);
 
-    long int cari_nisn = 9960312699;
+    long int cari_nisn = 9950310962;
 
     insertionSortNISN(mhs, size_array);
 
