@@ -35,6 +35,61 @@ void insertionSortNilai(Mahasiswa mhs[], int size_array) {
 }
 
 void selectionSortNISN(Mahasiswa mhs[], int size_array) {
+    int min;
+    Mahasiswa temp;
+    for (int i = 0; i < size_array; i++) {
+        min = i;
+        for (int j = i+1; j < size_array; j++) {
+            if (mhs[j].nisn < mhs[min].nisn) {
+                min = j;
+            }
+        }
+        temp = mhs[i];
+        mhs[i] = mhs[min];
+        mhs[min] = temp;
+    }
+}
+
+void selectionSortNilai(Mahasiswa mhs[], int size_array) {
+    int min;
+    Mahasiswa temp;
+    for (int i = 0; i < size_array; i++) {
+        min = i;
+        for (int j = i+1; j < size_array; j++) {
+            if (mhs[j].nilai < mhs[min].nilai) {
+                min = j;
+            }
+        }
+        temp = mhs[i];
+        mhs[i] = mhs[min];
+        mhs[min] = temp;
+    }
+}
+
+void bubbleSortNISN(Mahasiswa mhs[], int size_array) {
+    Mahasiswa temp;
+    for (int i = 0; i < size_array-1; i++) {
+        for (int j = 0; j < size_array-1; j++) {
+            if (mhs[j].nisn > mhs[j+1].nisn) {
+                temp = mhs[j];
+                mhs[j] = mhs[j+1];
+                mhs[j+1] = temp;
+            }
+        }
+    }
+}
+
+void bubbleSortNilai(Mahasiswa mhs[], int size_array) {
+    Mahasiswa temp;
+    for (int i = 0; i < size_array-1; i++) {
+        for (int j = 0; j < size_array-1; j++) {
+            if (mhs[j].nilai > mhs[j+1].nilai) {
+                temp = mhs[j];
+                mhs[j] = mhs[j+1];
+                mhs[j+1] = temp;
+            }
+        }
+    }
 }
 
 int main() {
@@ -94,7 +149,14 @@ int main() {
                 case 2: // Selection Sort
                 cout << "==========================" << endl;
                 
-                                cout << "Before: " << endl;
+                cout << "Before: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nisn << endl;
+                }
+
+                selectionSortNISN(mhs, size_array);
+
+                cout << "After: " << endl;
                 for (int i = 0; i < size_array; i++) {
                     cout << i << ": " << mhs[i].nisn << endl;
                 }
@@ -105,6 +167,18 @@ int main() {
 
                 case 3: // Bubble Sort
                 cout << "==========================" << endl;
+                
+                cout << "Before: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nisn << endl;
+                }
+
+                bubbleSortNISN(mhs, size_array);
+
+                cout << "After: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nisn << endl;
+                }
 
 
                 break;
@@ -145,6 +219,18 @@ int main() {
 
                 case 2: // Selection Sort
                 cout << "==========================" << endl;
+                
+                cout << "Before: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nilai << endl;
+                }
+
+                selectionSortNilai(mhs, size_array);
+
+                cout << "After: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nilai << endl;
+                }
 
 
                 break;
@@ -153,6 +239,18 @@ int main() {
 
                 case 3: // Bubble Sort
                 cout << "==========================" << endl;
+                
+                cout << "Before: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nilai << endl;
+                }
+
+                bubbleSortNilai(mhs, size_array);
+
+                cout << "After: " << endl;
+                for (int i = 0; i < size_array; i++) {
+                    cout << i << ": " << mhs[i].nilai << endl;
+                }
 
 
                 break;
